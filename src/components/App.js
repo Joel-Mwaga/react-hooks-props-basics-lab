@@ -1,20 +1,18 @@
 import React from "react";
-import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
-
-// pass this data down as props to the child component(s) that need it!
 import user from "../data/user";
-console.log(user);
 
 function App() {
-  return (
-    <div>
-      <NavBar />
-      <Home />
-      <About />
-    </div>
-  );
+    return (
+        <div>
+            <nav>
+                <h1>My Portfolio</h1>
+            </nav>
+            <Home id="home" name={user.name} city={user.city} color={user.color} />
+            <About id="about" bio={user.bio} links={user.links} />
+        </div>
+    );
 }
 
 export default App;
